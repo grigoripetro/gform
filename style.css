@@ -237,7 +237,7 @@ nav ul, nav li {
 .column-right .gravity-btn[disabled] {
 	background: grey;
 }
-.column-right .input-wrap .text-wrap {
+.column-right .input-wrap .text-wrap, .column-right .second-form .text-wrap, .column-right .second-form .long-text-wrap {
 	display: inline;
 	position: relative;
 }
@@ -249,8 +249,26 @@ label.error {
 }
 .column-right .input-wrap .text-wrap label.error {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 28px;
+    left: 10px;
+}
+.second-form {
+	display: none;
+}
+.second-form .text-wrap {
+	display: block;
+	float: left;
+	width: 25%;
+}
+.second-form .long-text-wrap {
+	float: left;
+	width: 50%;
+}
+.second-form .text-wrap input, .second-form .text-wrap select {
+	width: 97%;
+}
+.second-form .long-text-wrap input, .second-form .long-text-wrap select {
+	width: 98%;
 }
 .pretty {
 	margin-right: 0.6em;
@@ -303,6 +321,7 @@ label.error {
 	border: none;
 	border-radius: 5px;
 	padding: 8px 15px;
+	margin-bottom: 10px;
 }
 .gravity-input-large::placeholder, .gravity-input::placeholder {
 	color: #b9b8b8;

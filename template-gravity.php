@@ -2,6 +2,7 @@
 	/* Template Name: Gravity Form Template */ 
 	get_header(); 
 
+	$zipCode = '';
 	$zipCode = $_REQUEST['zipCode'];
 ?>
 
@@ -127,72 +128,107 @@
 
 				<!-- Second Form -->
 				<div class="second-form">
-					<input name="firstname" id="firstname" value="" placeholder="First Name *" type="text" aria-required="true" class="gravity-input">
-					<input name="lastname" id="lastname" value="" placeholder="Last Name *" type="text" aria-required="true" class="gravity-input">
-					<input name="address" id="address" value="" placeholder="Address *" type="text" aria-required="true" class="gravity-input">
-					<input name="city" id="city" value="" placeholder="City *" type="text" aria-required="true" class="gravity-input">
-					<select id="applicant_state_abbrv">
-						<option>Select</option>
-						<option value="AL">Alabama</option>
-						<option value="AK">Alaska</option>
-						<option value="AZ">Arizona</option>
-						<option value="AR">Arkansas</option>
-						<option value="CA">California</option>
-						<option value="CO">Colorado</option>
-						<option value="CT">Connecticut</option>
-						<option value="DE">Delaware</option>
-						<option value="DC">District of Columbia</option>
-						<option value="FL">Florida</option>
-						<option value="GA">Georgia</option>
-						<option value="HI">Hawaii</option>
-						<option value="ID">Idaho</option>
-						<option value="IL">Illinois</option>
-						<option value="IN">Indiana</option>
-						<option value="IA">Iowa</option>
-						<option value="KS">Kansas</option>
-						<option value="KY">Kentucky</option>
-						<option value="LA">Louisiana</option>
-						<option value="ME">Maine</option>
-						<option value="MD">Maryland</option>
-						<option value="MA">Massachusetts</option>
-						<option value="MI">Michigan</option>
-						<option value="MN">Minnesota</option>
-						<option value="MS">Mississippi</option>
-						<option value="MO">Missouri</option>
-						<option value="MT">Montana</option>
-						<option value="NE">Nebraska</option>
-						<option value="NV">Nevada</option>
-						<option value="NH">New Hampshire</option>
-						<option value="NJ">New Jersey</option>
-						<option value="NM">New Mexico</option>
-						<option value="NY">New York</option>
-						<option value="NC">North Carolina</option>
-						<option value="ND">North Dakota</option>
-						<option value="OH">Ohio</option>
-						<option value="OK">Oklahoma</option>
-						<option value="OR">Oregon</option>
-						<option value="PA">Pennsylvania</option>
-						<option value="PR">Puerto Rico</option>
-						<option value="RI">Rhode Island</option>
-						<option value="SC">South Carolina</option>
-						<option value="SD">South Dakota</option>
-						<option value="TN">Tennessee</option>
-						<option value="TX">Texas</option>
-						<option value="UT">Utah</option>
-						<option value="VT">Vermont</option>
-						<option value="VA">Virginia</option>
-						<option value="WA">Washington</option>
-						<option value="WV">West Virginia</option>
-						<option value="WI">Wisconsin</option>
-						<option value="WY">Wyoming</option>
-					</select>
+					<h2>About You</h2>
+					<div class="text-wrap">
+						<input name="firstname" id="firstname" value="" placeholder="First Name *" type="text" aria-required="true" class="gravity-input" style="margin-left:0">
+					</div>
+					<div class="text-wrap">
+						<input name="lastname" id="lastname" value="" placeholder="Last Name *" type="text" aria-required="true" class="gravity-input">
+					</div>
+					<div class="text-wrap">
+						<input name="address" id="address" value="" placeholder="Address *" type="text" aria-required="true" class="gravity-input">
+					</div>
+					<div class="text-wrap">
+						<input name="city" id="city" value="" placeholder="City *" type="text" aria-required="true" class="gravity-input">
+					</div>
+					<div class="clear"></div>
+					<div class="text-wrap">
+						<select id="applicant_state_abbrv" name="applicant_state_abbrv" class="gravity-input" style="margin-left:0">
+							<option>State *</option>
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="PR">Puerto Rico</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select>
+					</div>
+					<div class="text-wrap">
+						<input name="zipCode" id="zipCode" placeholder="ZIP *" type="text" aria-required="true" class="gravity-input" value="<?=$zipCode?>">
+					</div>
+					<div class="text-wrap">
+						<input name="phone" id="phone" placeholder="Day Phone *" type="text" aria-required="true" class="gravity-input">
+					</div>
+					<div class="text-wrap">
+						<input name="email" id="email" placeholder="Email *" type="email" aria-required="true" class="gravity-input">
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="long-text-wrap">
+						<input name="household" id="household" placeholder="How many people are in your household? *" type="email" aria-required="true" class="gravity-input" style="margin-left:0">
+					</div>
+					<div class="long-text-wrap">
+						<select id="expected" name="expected" class="gravity-input">
+							<option>What do you expect your household income to be in 2018? *</option>
+							<option value="b16">Below $16,000</option>
+							<option value="b47">Between $16,000 and $47,000</option>
+							<option value="o47">Over $47,000</option>
+							<option value="no">Don't know</option>
+						</select>
+					</div>
+					<div class="clear"></div>
 				</div>
 				<!-- /Second Form -->
 
 				<!-- Continue button -->
-				<input type="button" id="continue-btn" value="Continue" class="gsubmit-btn" />
-
-
+				<input type="submit" id="continue-btn" value="Continue" class="gsubmit-btn" />
 			</form>
 			<!-- /Gravity Form -->
 		</section>
@@ -205,6 +241,7 @@ jQuery(document).ready(function($) {
 	var childCount = 0;     // children count
 	var spouseFlag = false; // spouse flag
 	var submitFlag = true;  // check submit button status
+	var secondStep = false; // is enabled second step
 
 	// Add Spouse
 	$("#spouse-btn").on("click", function() {
@@ -269,8 +306,7 @@ jQuery(document).ready(function($) {
 	                required: true
 	            },
 	            gender: {
-	                required: true,
-	                maxlength: 5
+	                required: true
 	            },
 	            birthday: {
 	            	required: true,
@@ -286,14 +322,85 @@ jQuery(document).ready(function($) {
 	            }
 	        },
 	        submitHandler: function (form) { 
-	            alert('valid form submitted');
-	            return false;
+	            form.submit();
 	        }
 	    });
 	});
 
 	// Continue button process
 	$("#continue-btn").on("click", function() {
+		if( secondStep == false ) {
+			$("#gform_1").validate({ // initialize the plugin
+		        rules: {
+		            appname: "required",
+		            gender: "required",
+		            birthday: {
+		            	required: true,
+		            	date: true
+		            },
+		            height: {
+		            	required: true,
+		            	number: true
+		            },
+		            weight: {
+		            	required: true,
+		            	number: true
+		            },
+		            firstname: "required",
+		            lastname: "required",
+		            address: {
+		            	required: true,
+		            	address: true
+		            },
+		            city: "required",
+		            applicant_state_abbrv: {
+		            	required: true
+		            },
+		            phone: "required",
+		            email: {
+		            	required: true,
+		            	email: true
+		            },
+		            household: "required",
+		            expected: {
+		            	required: true
+		            }
+		        },
+		        submitHandler: function (form) {
+		            $(".second-form").fadeIn();
+		            secondStep = true;
+		            return false;
+		        }
+		    });
+		} else {
+			$("#gform_1").validate({ // initialize the plugin
+		        rules: {
+		            firstname: "required",
+		            lastname: "required",
+		            address: {
+		            	required: true,
+		            	address: true
+		            },
+		            city: "required",
+		            applicant_state_abbrv: {
+		            	required: true
+		            },
+		            phone: "required",
+		            email: {
+		            	required: true,
+		            	email: true
+		            },
+		            household: "required",
+		            expected: {
+		            	required: true
+		            }
+		        },
+		        submitHandler: function (form) {
+		            alert("Success!");
+		            form.submit();
+		        }
+		    });
+		}
 	});
 
 	$(".main-form input").on("keydown", function() {
